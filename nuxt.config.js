@@ -1,8 +1,6 @@
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'cintatic',
     meta: [
@@ -13,20 +11,23 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
+  router: {
+    base: '/cintatic-site/',
+  },
+
   css: [],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
+    'nuxt-purgecss',
+
+    '@nuxtjs/google-analytics',
+
     '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/tailwindcss
+
     '@nuxtjs/tailwindcss',
 
     '@nuxt/image',
@@ -35,33 +36,43 @@ export default {
 
     '@aceforth/nuxt-optimized-images',
   ],
+
+  googleAnalytics: {
+    id: 'UA-196872393-1', // Use as fallback if no runtime config is provided
+  },
+
   optimizedImages: {
     optimizeImages: true,
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
-  ],
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', '@nuxt/content'],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  'google-gtag': {
+    id: 'UA-196872393-1',
+    config: {
+      anonymize_ip: true, // anonymize IP
+      send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+      linker: {
+        domains: ['https://isaacddr.github.io/cintatic-site'],
+      },
+    },
+    debug: true, // enable to track in dev mode
+    disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...).
+  },
+
   axios: {},
 
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
       lang: 'en',
     },
   },
 
-  // Content module configuration: https://go.nuxtjs.dev/config-content
+  server: {
+    host: '0',
+  },
+
   content: {},
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
