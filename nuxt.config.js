@@ -32,13 +32,13 @@ export default {
     '@nuxt/image',
 
     'nuxt-vite',
+
     '@aceforth/nuxt-optimized-images',
   ],
   optimizedImages: {
     optimizeImages: true,
   },
 
-  server: { host: '0' },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
