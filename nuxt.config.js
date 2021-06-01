@@ -32,8 +32,6 @@ export default {
     '@nuxt/image',
 
     'nuxt-vite',
-
-    '@aceforth/nuxt-optimized-images',
   ],
 
   googleAnalytics: {
