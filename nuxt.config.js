@@ -31,7 +31,7 @@ export default {
 
     '@nuxt/image',
 
-    'nuxt-vite',
+    //'nuxt-vite',
   ],
 
   googleAnalytics: {
