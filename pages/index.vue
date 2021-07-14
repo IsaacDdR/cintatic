@@ -626,7 +626,7 @@
               text-deep-purple-accent-400
               hover:text-deep-purple-800
             "
-            >Learn more</a
+            >Conoce más</a
           >
         </div>
         <div>
@@ -675,9 +675,10 @@
               ></path>
             </svg>
           </div>
-          <h6 class="mb-2 font-semibold leading-5">First contact</h6>
+          <h6 class="mb-2 font-semibold leading-5">Soporte técnico</h6>
           <p class="mb-3 text-sm text-gray-900">
-            For those who have seen the Earth from space or in dreams.
+            En línea o en campo te ofrecemos soporte y mantenimiento a su
+            software y hardware.
           </p>
           <ul class="mb-4 -ml-1 space-y-2">
             <li class="flex items-start">
@@ -696,7 +697,7 @@
                   ></polygon>
                 </svg>
               </span>
-              Listen
+              Mantenimiento
             </li>
             <li class="flex items-start">
               <span class="mr-1">
@@ -714,7 +715,7 @@
                   ></polygon>
                 </svg>
               </span>
-              Communicate
+              Reparación
             </li>
             <li class="flex items-start">
               <span class="mr-1">
@@ -732,7 +733,7 @@
                   ></polygon>
                 </svg>
               </span>
-              Run
+              Fallas
             </li>
           </ul>
           <a
@@ -747,7 +748,7 @@
               text-deep-purple-accent-400
               hover:text-deep-purple-800
             "
-            >Learn more</a
+            >Conoce más</a
           >
         </div>
       </div>
